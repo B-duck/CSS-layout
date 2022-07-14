@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex-grow */
+        /* flex-shrink */
+        /* flex-basis 指定flex元素在主轴方向上的初始大小 */
+        .box1{
+            width: 400px;
+            height: 200px;
+            background: green;
+            display: flex;
+        }
+        /* .box1 div{
+            width: 100px;
+            height: 30px;
+            background: pink;
+            /* 占用剩余空间的比例 */
+            /* flex-grow: 0.5;
+        } */ 
+        /* .box1 div{
+            width: 600px;
+            height: 100px;
+            background: pink;
+            flex-shrink: 3;
+        } */
+        .box1 div{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            /* 优先级大于宽度 */
+            flex-basis: 300px;
+        }
+        .box2{
+            width: 400px;
+            height: 200px;
+            background: green;
+            display: flex;
+            align-items: flex-start;
+        }
+        .box2 div{
+            background: pink;
+            /* 自适应内容*/
+            /* flex-basis: 0; */
+            flex-basis: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div>2</div>
+    </div>
+    <div class="box2">
+        <div>测试文字</div>
+    </div>
+</body>
+</html>
