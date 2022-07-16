@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background: pink;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px;
+
+            /* 可以调节产生隐式网格的高度 */
+            /* 也就是调节了 盒子4，5的高度 */
+            grid-auto-rows: 100px; 
+            /* 列方向上产生隐式网格 */
+            /* grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px; */
+            /* grid-auto-columns: 100px; */
+        }
+        .box div{
+            background: green;
+            border: 1px black solid;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 1,2,3盒子是显式网格，4，5是隐式网格 -->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

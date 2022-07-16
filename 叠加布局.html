@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 530px;
+            height: 300px;
+            display: grid;
+        }
+        .box img{
+            grid-area: 1/1/1/1;
+        }
+        .box span{
+            grid-area: 1/1/1/1;
+            justify-self: end;
+            margin-right: 10px;
+        }
+        .box p{
+            grid-area: 1/1/1/1;
+            align-self: end;
+            margin: 0;
+            padding: 0;
+            background: rgba(0, 0, 0,0.5);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./phone.png">
+        <span>自制</span>
+        <p>手机热卖。。。</p>
+    </div>
+</body>
+</html>
