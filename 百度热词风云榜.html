@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Swiper轮播图/reset.css">
+    <style>
+        .top{
+            width: 308px;
+            border: 1px #dadadc solid;
+            margin: 20px auto;
+        }
+        .title{
+            height: 30px;
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .list{
+            height: 352px;
+            display: grid;
+            margin: 0 14px;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4,1fr);
+            /* 划分区域 */
+            grid-template-areas:
+            "a1 a2 a2"
+            "a3 a2 a2"
+            "a4 a4 a5"
+            "a6 a7 a7";
+            gap: 8px;
+        }
+        .list div:nth-of-type(1){
+            grid-area: a1;
+        }
+        .list div:nth-of-type(2){
+            grid-area: a2;
+        }
+        .list div:nth-of-type(3){
+            grid-area: a3;
+        }
+        .list div:nth-of-type(4){
+            grid-area: a4;
+        }
+        .list div:nth-of-type(5){
+            grid-area: a5;
+        }
+        .list div:nth-of-type(6){
+            grid-area: a6;
+        }
+        .list div:nth-of-type(7){
+            grid-area: a7;
+        }
+
+        .theme1{
+            background-image: linear-gradient(#187fe6,#32aff2);
+        }
+        .theme2{
+            background-image: linear-gradient(#f2246c,#fe5bac);
+        }
+        .theme3{
+            background-image: linear-gradient(#d46300,#e5ad1c);
+        }
+
+        .page{
+            margin: 0 10px;
+            display: flex;
+            justify-content: flex-end;
+            height: 40px;
+            align-items: center;
+        }
+        .page a{
+            border: 1px #cbcbcb solid;
+            margin-left: 2px;
+            padding: 4px;
+        }
+        .page span{
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="title">今日热榜</div>
+        <div class="list">
+            <div class="theme1">1</div>
+            <div class="theme1">2</div>
+            <div class="theme2">3</div>
+            <div class="theme1">4</div>
+            <div class="theme1">5</div>
+            <div class="theme3">6</div>
+            <div class="theme3">7</div>
+        </div>
+        <div class="page">
+            <span>1</span>
+            <a href="">2</a>
+            <a href="">3</a>
+        </div>
+    </div>
+</body>
+</html>
