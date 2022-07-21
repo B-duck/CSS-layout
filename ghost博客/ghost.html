@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="../Swiper轮播图/reset.css">
     <style>
+        /* 选择器中定义变量 */
+        :root{
+            --container:100%;
+        }
         body {
             background: #ebebeb;
         }
@@ -79,6 +83,11 @@
 
         .main{
             padding: 0 15px;
+            /*  */
+            width: var(--container);
+            margin: 0 auto;
+            box-sizing: border-box;
+
         }
         .article{
             background: white;
@@ -99,12 +108,16 @@
             font-size: 18px;
             margin-top: 25px;
         }
-        .article button{
+        .article button,
+        .aside button
+        {
             border: none;
             background: #e67e22;
             color: white;
             padding: 10px;
             cursor: pointer;
+        }
+        .article button{
             margin:  30px 0;
         }
         .article section{
@@ -113,6 +126,44 @@
         }
         .article section i{
             margin-right: 10px;
+        }
+
+        .aside{
+            background: white;
+            padding: 35px;
+            margin-top: 35px;
+        }
+        .aside h3{
+            font-size: 20px;
+            font-weight: 400;
+            padding-bottom: 10px;
+            border-bottom: 1px #ccc solid;
+            position: relative;
+        }
+
+        .aside h3::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 90px;
+            height: 1px;
+            background: #e67e22;
+
+        }
+        .aside p{
+            margin-top: 30px;
+        }
+        .aside button{
+            margin-top: 30px;
+            width: 100%;
+        }
+        .aside div a{
+            border: 1px #ebebeb solid;
+            display: inline-block;
+            margin: 11px 7px;
+            /* 上下 左右 */
+            padding: 5px 10px;
         }
 
 
@@ -289,6 +340,10 @@
         }
 
         @media (min-width: 992px) {
+            :root{
+                /* 三分之二 版心940px */
+                --container: 940px;
+            }
             .row .col-lg-1 {
                 grid-area: auto/auto/auto/span 1;
             }
@@ -339,6 +394,10 @@
         }
 
         @media (min-width: 1200px) {
+            :root{
+                /*  */
+                --container: 1160px;
+            }
             .row .col-xl-1 {
                 grid-area: auto/auto/auto/span 1;
             }
@@ -518,7 +577,37 @@
                     <a href="">客户端</a>
                 </section>
             </div>
+        </div>
     </div>
+
+    <div class="col-lg-4">
+        <div class="aside">
+            <h3>声明</h3>
+            <p>Ghost 中文版不再继续维护，请去官方下载。</p>
+        </div>
+        <div class="aside">
+            <h3>下载</h3>
+            <button>最新版</button>
+        </div>
+        <div class="aside">
+            <h3>标签云</h3>
+            <div>
+                <a href="#">客户端</a>
+                <a href="#">Android</a>
+                <a href="#">jQuery</a>
+                <a href="#">Ghost 0.7 版本</a>
+                <a href="#">开源</a>
+                <a href="#">助手函数</a>
+                <a href="#">客户端</a>
+                <a href="#">客户端</a>
+                <a href="#">Android</a>
+                <a href="#">jQuery</a>
+                <a href="#">Ghost 0.7 版本</a>
+                <a href="#">开源</a>
+                <a href="#">助手函数</a>
+                <a href="#">客户端</a>
+            </div>
+        </div>
     </div>
 </body>
 
