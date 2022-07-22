@@ -141,7 +141,9 @@
             position: relative;
         }
 
-        .aside h3::after{
+        .aside h3::after,
+        .item h3::after
+        {
             content: "";
             position: absolute;
             left: 0;
@@ -149,7 +151,6 @@
             width: 90px;
             height: 1px;
             background: #e67e22;
-
         }
         .aside p{
             margin-top: 30px;
@@ -164,6 +165,52 @@
             margin: 11px 7px;
             /* 上下 左右 */
             padding: 5px 10px;
+        }
+
+
+        .foot{
+            background: #202020;
+            margin-top: 35px;
+            padding-top: 35px;
+            overflow: hidden;
+        }
+        .wrapper{
+            width: var(--container);
+            margin: 0 auto;
+        }
+        .item{
+            padding: 0 30px;
+            margin-bottom: 30px;
+        }
+        .item h3{
+            color: white;
+            font-size: 22px;
+            padding-bottom: 10px;
+            border-bottom: 1px #ccc solid;
+            position: relative;
+        }
+        .item div{
+            margin: 20px;
+        }
+        .item div a{
+            margin: 10px;
+            display: inline-block;
+            color: #959595;
+        }
+
+        .copyright{
+            background: black;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .copyright p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #959595;
         }
 
 
@@ -341,8 +388,11 @@
 
         @media (min-width: 992px) {
             :root{
-                /* 三分之二 版心940px */
+                /* 版心940px */
                 --container: 940px;
+            }
+            .row>[class*="col"] {
+                padding: 0 15px;
             }
             .row .col-lg-1 {
                 grid-area: auto/auto/auto/span 1;
@@ -395,9 +445,12 @@
 
         @media (min-width: 1200px) {
             :root{
-                /*  */
                 --container: 1160px;
             }
+            .row>[class*="col"] {
+                padding: 0 15px;
+            }
+
             .row .col-xl-1 {
                 grid-area: auto/auto/auto/span 1;
             }
@@ -578,36 +631,95 @@
                 </section>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-4">
-        <div class="aside">
-            <h3>声明</h3>
-            <p>Ghost 中文版不再继续维护，请去官方下载。</p>
-        </div>
-        <div class="aside">
-            <h3>下载</h3>
-            <button>最新版</button>
-        </div>
-        <div class="aside">
-            <h3>标签云</h3>
-            <div>
-                <a href="#">客户端</a>
-                <a href="#">Android</a>
-                <a href="#">jQuery</a>
-                <a href="#">Ghost 0.7 版本</a>
-                <a href="#">开源</a>
-                <a href="#">助手函数</a>
-                <a href="#">客户端</a>
-                <a href="#">客户端</a>
-                <a href="#">Android</a>
-                <a href="#">jQuery</a>
-                <a href="#">Ghost 0.7 版本</a>
-                <a href="#">开源</a>
-                <a href="#">助手函数</a>
-                <a href="#">客户端</a>
+
+        <div class="col-lg-4">
+            <div class="aside">
+                <h3>声明</h3>
+                <p>Ghost 中文版不再继续维护，请去官方下载。</p>
+            </div>
+            <div class="aside">
+                <h3>下载</h3>
+                <button>最新版</button>
+            </div>
+            <div class="aside">
+                <h3>标签云</h3>
+                <div>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="foot">
+        <div class="wrapper row">
+            <div class="item col-lg-4">
+                <h3>友链</h3>
+                <div>
+                    <a href="#">Bootstrap中文网</a>
+                    <a href="#">React</a>
+                    <a href="#">Vue.js</a>
+                    <a href="#">Svelte</a>
+                    <a href="#">Preact</a>
+                    <a href="#">Babel</a>
+                    <a href="#">Webpack</a>
+                    <a href="#">Rollup.js</a>
+                    <a href="#">Bootstrap中文网</a>
+                    <a href="#">React</a>
+                    <a href="#">Vue.js</a>
+                    <a href="#">Svelte</a>
+                    <a href="#">Preact</a>
+                    <a href="#">Babel</a>
+                    <a href="#">Webpack</a>
+                    <a href="#">Rollup.js</a>
+                </div>
+            </div>
+            <div class="item col-lg-4">
+                <h3>标签云</h3>
+                <div>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                    <a href="#">客户端</a>
+                    <a href="#">Android</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">Ghost 0.7 版本</a>
+                    <a href="#">开源</a>
+                    <a href="#">助手函数</a>
+                    <a href="#">客户端</a>
+                </div>
+            </div>
+            <div class="item col-lg-4">
+                <h3>合作伙伴</h3>
+                <div>
+                    <a href="#">腾讯</a>
+                    <a href="#">阿里巴巴</a>
+                    <a href="#">百度</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © Ghost中文网 | 京ICP备11008151号-11 | 京公网安备11010802014853</p>
     </div>
 </body>
 
